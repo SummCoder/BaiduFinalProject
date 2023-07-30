@@ -1,47 +1,34 @@
 package com.example.finalproject
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.finalproject.ui.theme.FinalProjectTheme
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
+import com.example.finalproject.addnews.AddNewsActivity
+import com.example.finalproject.databinding.ActivityMainBinding
+import com.example.finalproject.weather.WeatherActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : ComponentActivity() {
+class MainActivity  : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            FinalProjectTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
-            }
-        }
-    }
-}
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
+        //获取底部导航栏控件
+        val navView: BottomNavigationView = binding.navView
 
-        modifier = modifier
-    )
-}
+        //获取容器控件
+        val navController = findNavController(R.id.nav_host_fragment)
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    FinalProjectTheme {
-        Greeting("Android")
+        //通过setupWithNavController将底部导航和导航控制器进行绑定
+//        NavigationUI.setupWithNavController(bottomNavigation,navController);
+        navView.setupWithNavController(navController)
+
     }
 }

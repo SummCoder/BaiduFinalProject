@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.finalproject.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+<!--        &lt;!&ndash;添加动作&ndash;&gt;-->
+<!--        <action-->
+<!--            android:id="@+id/action_homeFragment_to_videoFragment"-->
+<!--            app:destination="@id/navigation_video"/>-->
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_video"
+        android:name="com.example.finalproject.video.VideoFragment"
+        android:label="@string/video"
+        tools:layout="@layout/fragment_video" />
+
+    <fragment
+        android:id="@+id/navigation_my"
+        android:name="com.example.finalproject.my.MyFragment"
+        android:label="@string/my"
+        tools:layout="@layout/fragment_my" />
+</navigation>

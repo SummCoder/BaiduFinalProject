@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/appBarLayout"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        tools:ignore="MissingConstraints">-->
+<!--        <com.google.android.material.appbar.CollapsingToolbarLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="15dp">-->
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+<!--                <TextView-->
+<!--                    android:id="@+id/logo"-->
+<!--                    android:layout_width="103dp"-->
+<!--                    android:layout_height="60dp"-->
+<!--                    android:layout_marginStart="154dp"-->
+<!--                    android:layout_marginEnd="154dp"-->
+<!--                    android:layout_marginTop="100dp"-->
+<!--                    android:text="LOGO"-->
+<!--                    android:textColor="#070707"-->
+<!--                    android:textSize="36sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                &lt;!&ndash;    <SearchView&ndash;&gt;-->
+<!--                &lt;!&ndash;        android:id="@+id/searchView"&ndash;&gt;-->
+<!--                &lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--                &lt;!&ndash;        android:layout_height="45dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;        android:layout_marginStart="16dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;        android:layout_marginTop="16dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;        android:layout_marginEnd="16dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;        android:background="@drawable/search_background"&ndash;&gt;-->
+<!--                &lt;!&ndash;        android:queryHint="请输入搜索内容"&ndash;&gt;-->
+<!--                &lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--                &lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--                &lt;!&ndash;        app:layout_constraintTop_toBottomOf="@+id/logo" />&ndash;&gt;-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/extra"-->
+<!--                    android:layout_width="37dp"-->
+<!--                    android:layout_height="43dp"-->
+<!--                    android:layout_marginStart="256dp"-->
+<!--                    android:layout_marginTop="28dp"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/textView3"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:srcCompat="@drawable/extra"-->
+<!--                    tools:ignore="MissingConstraints" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/weather"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginTop="28dp"-->
+<!--                    android:layout_marginEnd="312dp"-->
+<!--                    android:text="28°"-->
+<!--                    android:textColor="#504C4C"-->
+<!--                    android:textSize="36sp"-->
+<!--                    app:layout_constraintEnd_toStartOf="@+id/extra"-->
+<!--                    app:layout_constraintHorizontal_bias="0.142"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    tools:ignore="MissingConstraints" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textView3"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="12dp"-->
+<!--                    android:layout_marginTop="4dp"-->
+<!--                    android:text="南京"-->
+<!--                    android:textSize="14sp"-->
+<!--                    app:layout_constraintBottom_toTopOf="@+id/textView4"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/weather"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/weather"-->
+<!--                    tools:ignore="MissingConstraints" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textView4"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="12dp"-->
+<!--                    android:text="阴"-->
+<!--                    android:textSize="14sp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/weather"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/weather"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textView3"-->
+<!--                    app:layout_constraintVertical_bias="0.0"-->
+<!--                    tools:ignore="MissingConstraints" />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        </com.google.android.material.appbar.CollapsingToolbarLayout>-->
+
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/search_bar"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/searchEditText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:background="@drawable/search_background"-->
+<!--            android:hint="搜索或输入网址"-->
+<!--            android:imeOptions="actionSearch"-->
+<!--            android:inputType="text"-->
+<!--            android:maxLines="1"-->
+<!--            android:singleLine="true"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/logo" />-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/news"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/searchEditText" />-->
+<!--    </LinearLayout>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="103dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="154dp"
+        android:layout_marginEnd="154dp"
+        android:layout_marginTop="100dp"
+        android:text="LOGO"
+        android:textColor="#070707"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <SearchView-->
+<!--        android:id="@+id/searchView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:background="@drawable/search_background"-->
+<!--        android:queryHint="请输入搜索内容"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/logo" />-->
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/search_background"
+        android:hint="搜索或输入网址"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:maxLines="1"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"/>
+
+    <ImageView
+        android:id="@+id/extra"
+        android:layout_width="37dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="135dp"
+        app:layout_constraintBottom_toTopOf="@+id/searchEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/extra"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="312dp"
+        android:layout_marginBottom="130dp"
+        android:text="28°"
+        android:textColor="#504C4C"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/searchEditText"
+        app:layout_constraintEnd_toStartOf="@+id/extra"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:text="南京"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/weather"
+        app:layout_constraintTop_toTopOf="@+id/weather"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="阴"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/weather"
+        app:layout_constraintStart_toEndOf="@+id/weather"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchEditText" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
