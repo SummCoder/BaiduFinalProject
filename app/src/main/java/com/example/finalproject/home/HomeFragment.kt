@@ -6,17 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.R
 import com.example.finalproject.addnews.AddNewsActivity
 import com.example.finalproject.weather.WeatherActivity
-import com.google.android.material.appbar.AppBarLayout
-import java.lang.Math.abs
 
 class HomeFragment : Fragment() {
 

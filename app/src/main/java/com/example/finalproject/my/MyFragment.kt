@@ -17,9 +17,13 @@ class MyFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_my, container, false)
+        val view = inflater.inflate(R.layout.activity_logged_in, container, false)
 
         startActivity(Intent(activity, UserActivity::class.java))
+
+//        view.findViewById<Button>(R.id.btnLogout).setOnClickListener {
+//            startActivity(Intent(activity, LogoutActivity::class.java))
+//        }
 
         return view
     }
