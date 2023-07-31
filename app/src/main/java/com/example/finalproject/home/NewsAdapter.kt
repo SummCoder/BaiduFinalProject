@@ -1,18 +1,23 @@
 package com.example.finalproject.home
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.R
+import com.example.finalproject.video.VideoViewActivity
 
-class NewsAdapter : RecyclerView.Adapter<NewsViewHolder> {
-
+class NewsAdapter(context: Context?, demoList: List<ItemBean>) : RecyclerView.Adapter<NewsViewHolder>() {
+//    class NewsAdapter(context: Context?, demoList: List<ItemBean>) : RecyclerView.Adapter<NewsViewHolder>
     /** 保存数据的列表 */
     private val demoList: List<ItemBean>
+    private val context: Context?
 
-    constructor(demoList: List<ItemBean>) {
+    init {
         this.demoList = demoList
+        this.context = context
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
@@ -43,6 +48,11 @@ class NewsAdapter : RecyclerView.Adapter<NewsViewHolder> {
         }
         itemBean.newsSign?.let {
             holder.tvSign.text = it
+        }
+
+        holder.tvContent.setOnClickListener {
+            val intent: Intent = Intent(context, NewsDetailActivity::class.java)
+            context!!.startActivity(intent)
         }
 //        Log.i("hello", holder.tvContent.text.toString())
     }
