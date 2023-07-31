@@ -62,6 +62,8 @@ class HomeFragment : Fragment() {
 //            }
 //        })
 
+
+
         return view
     }
 
@@ -78,7 +80,7 @@ class HomeFragment : Fragment() {
         list.add(zeroItem)
         list.add(firstItem)
 
-        for (i in 0 until 5) {
+        for (i in 0 until 8) {
             list.add(secondItem)
             list.add(thirdItem)
             list.add(fourthItem)

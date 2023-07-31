@@ -24,7 +24,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsViewHolder> {
 
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
-        Log.i("hello", (position).toString())
+//        Log.i("hello", (position).toString())
         val itemBean = demoList[position]
         if (position < 2) {
             holder.ivCover.setImageResource(0) // 设置图片为空
@@ -45,7 +45,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsViewHolder> {
         itemBean.newsSign?.let {
             holder.tvSign.text = it
         }
-        Log.i("hello", holder.tvContent.text.toString())
+//        Log.i("hello", holder.tvContent.text.toString())
     }
 
 

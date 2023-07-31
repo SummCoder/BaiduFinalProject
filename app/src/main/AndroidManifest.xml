@@ -23,6 +23,9 @@
         </activity>
         <activity android:name=".weather.WeatherActivity" />
         <activity android:name=".addnews.AddNewsActivity" />
+        <activity android:name=".my.LoginActivity" />
+        <activity android:name=".my.RegisterActivity" />
+        <activity android:name=".my.UserActivity" />
     </application>
 
 </manifest>

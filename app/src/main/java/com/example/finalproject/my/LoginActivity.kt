@@ -1,10 +1,12 @@
 package com.example.finalproject.my
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.finalproject.MainActivity
 import com.example.finalproject.R
 
 class LoginActivity : AppCompatActivity()  {
@@ -22,6 +24,11 @@ class LoginActivity : AppCompatActivity()  {
             if (success) {
                 Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show()
                 // 进行登录后的操作，如跳转到主页
+                val bundle = Bundle()
+                bundle.putBoolean("isLoggedIn", true)
+                val intent = Intent(this, UserActivity::class.java)
+                intent.putExtras(bundle)
+                startActivity(intent)
             } else {
                 Toast.makeText(this, "用户名或密码错误", Toast.LENGTH_SHORT).show()
             }

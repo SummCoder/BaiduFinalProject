@@ -1,5 +1,6 @@
 package com.example.finalproject.my
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -23,7 +24,8 @@ class RegisterActivity : AppCompatActivity()  {
                 val success = databaseHelper.registerUser(username, password)
                 if (success) {
                     Toast.makeText(this, "注册成功", Toast.LENGTH_SHORT).show()
-                    finish()
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
                 } else {
                     Toast.makeText(this, "注册失败", Toast.LENGTH_SHORT).show()
                 }
