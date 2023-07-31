@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.R
 import com.example.finalproject.addnews.AddNewsActivity
+import com.example.finalproject.search.SearchActivity
 import com.example.finalproject.weather.WeatherActivity
 
 class HomeFragment : Fragment() {
@@ -39,6 +41,10 @@ class HomeFragment : Fragment() {
         // 跳转到添加新闻的activity
         view.findViewById<ImageView>(R.id.extra).setOnClickListener {
             startActivity(Intent(activity, AddNewsActivity::class.java))
+        }
+        //跳转到搜索页框
+        view.findViewById<EditText>(R.id.searchEditText).setOnClickListener {
+            startActivity(Intent(activity, SearchActivity::class.java))
         }
 
 //        view.findViewById<AppBarLayout>(R.id.appBarLayout).addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
@@ -84,5 +90,6 @@ class HomeFragment : Fragment() {
 
         return list
     }
+
 
 }

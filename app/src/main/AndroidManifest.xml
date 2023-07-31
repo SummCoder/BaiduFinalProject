@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -25,9 +25,12 @@
         <activity android:name=".weather.WeatherActivity" />
         <activity android:name=".addnews.AddNewsActivity" />
         <activity android:name=".my.LoginActivity" />
+        <activity android:name=".my.LogoutActivity" />
         <activity android:name=".my.RegisterActivity" />
-        <activity android:name=".my.UserActivity" />
         <activity android:name=".video.VideoViewActivity" />
+        <activity android:name=".search.SearchActivity" />
+        <activity android:name=".search.WebViewActivity" />
+        <activity android:name=".my.UserActivity" />
     </application>
 
 </manifest>

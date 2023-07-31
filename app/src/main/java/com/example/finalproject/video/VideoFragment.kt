@@ -1,15 +1,18 @@
 package com.example.finalproject.video
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.R
 import com.example.finalproject.home.ItemBean
 import com.example.finalproject.home.NewsAdapter
+import com.example.finalproject.search.SearchActivity
 
 
 class VideoFragment : Fragment() {
@@ -32,6 +35,11 @@ class VideoFragment : Fragment() {
 
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = adapter
+
+        //跳转到搜索页框
+        view.findViewById<EditText>(R.id.searchEditText1).setOnClickListener {
+            startActivity(Intent(activity, SearchActivity::class.java))
+        }
 
         return view
     }
